@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "target": "es2021",
+    "baseUrl": "."
+  },
+  "exclude": ["node_modules"]
+}
