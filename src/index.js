@@ -1,4 +1,4 @@
-export default function staticVuePlugin() {
+module.exports = function staticVuePlugin() {
   return {
     name: 'static-vue-sfc',
     apply: 'serve',
@@ -16,5 +16,5 @@ export default function staticVuePlugin() {
       }
     }
   };
-}
+};
 

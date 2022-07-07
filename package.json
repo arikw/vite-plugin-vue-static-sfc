@@ -2,10 +2,8 @@
   "name": "vite-plugin-vue-static-sfc",
   "version": "1.0.0",
   "author": "Arik W",
-  "sourceType": "module",
   "license": "MIT",
   "description": "Serve \".vue\" files as static assets",
-  "main": "src/index.js",
   "scripts": {
     "dev": "vite",
     "lint": "node_modules/.bin/eslint --ext .js,.vue --max-warnings=0 --ignore-path .eslintignore ."
@@ -14,8 +12,18 @@
     "eslint": "^8.18.0"
   },
   "engines": {
-    "node": ">= 8"
+    "node": ">= 12"
   },
+  "main": "src/index.js",
+  "exports": {
+    ".": {
+      "import": "./src/index.mjs",
+      "require": "./src/index.js"
+    }
+  },
+  "files": [
+    "/src"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arikw/vite-plugin-vue-static-sfc.git"
